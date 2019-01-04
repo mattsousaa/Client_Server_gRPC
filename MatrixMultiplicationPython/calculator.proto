@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package org.mattsousaa.boot.mat_mult;
+
+message Number {
+    int32 value1 = 1;
+    int32 value2 = 2;
+    int32 value3 = 3;
+    int32 value4 = 4;
+    string msg = 5; 
+}
+
+service Calculator {
+    rpc MatMult(Number) returns (Number) {}
+}
